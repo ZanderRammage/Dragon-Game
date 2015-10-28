@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "DragonGame",
+		uint64 ResourceId = 55eb81bf21a015d3,
+	},
+},

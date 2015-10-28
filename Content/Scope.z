@@ -1,0 +1,22 @@
+class Scope : ZilchComponent
+{
+    var Test: Integer = 0;
+    
+    function Initialize(init : CogInitializer)
+    {
+        var test = 9001;
+        Console.WriteLine("test in Initialize: `test`");
+        this.ScopeTest();
+        Console.WriteLine("test in Initialize after ScopeTest: `test`");
+    }
+    
+    function ScopeTest()
+    {
+        var test = 9002;
+        Console.WriteLine("test in ScopeTest: `test`");
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    }
+}

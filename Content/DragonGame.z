@@ -1,0 +1,28 @@
+class DragonGame : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+/*---------------------------------------------------------------------Variables-------------------------------------------------------------------------------*/
+        var randNumGen = new Random();               //Creates Random Number Generator
+        var randNum = randNumGen.DieRoll(20);        //Sets the limit on what the "dice" can roll
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+        Console.WriteLine(randNum);                  //Display Random Number
+/*----------------------------------------------------------------Win/Lose Statements--------------------------------------------------------------------------*/
+        if (randNum > 10)                            //Checks to see if the random number that it chose is greater than or equal to 10
+        {
+            Console.WriteLine("Dragon is ded!");     //Because English
+        }
+        else if (randNum < 10)
+        {
+            Console.WriteLine("You is ded!");        //Still the bestest Englisher
+        }
+        else
+        {
+            Console.WriteLine("You both is ded!");   //Getting better(ish) at Englishing
+        }
+    }
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    }
+}
